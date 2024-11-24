@@ -1,6 +1,6 @@
 # brainstorm
 
-A smarter web fuzzing tool that combines local LLM models (via Ollama) and [ffuf](https://github.com/ffuf/ffuf) to enhance directory and file discovery.
+A smarter web fuzzing tool that combines local LLM models (via Ollama) and [ffuf](https://github.com/ffuf/ffuf) to optimize directory and file discovery.
 
 ## Short Description
 
