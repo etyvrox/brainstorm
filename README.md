@@ -6,6 +6,9 @@ A smarter web fuzzing tool that leverages local LLM models (via Ollama) and [ffu
 
 Combines traditional web fuzzing techniques with AI-powered path generation to discover hidden endpoints, files, and directories in web applications.
 
+## Screenshot
+![screenshot](screenshot.png)
+
 ## Long Description
 
 This tool enhances traditional web fuzzing by using local AI language models (via Ollama) to generate intelligent guesses for potential paths and filenames. It works by:
