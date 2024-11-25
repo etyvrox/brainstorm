@@ -30,9 +30,10 @@ There are 2 tools:
 - Ollama (https://ollama.ai)
 - Required Python packages (see requirements.txt)
 
-## Local Ollama LLM 
+## Local Ollama models
 
-By default, the tool is using the model `qwen2.5-coder:latest`. This model needs to be downloaded first.
+By default, the tool is using the model `qwen2.5-coder:latest`. 
+This model (or other models you want to use) needs to be downloaded first.
 
 ```bash
 ollama pull qwen2.5-coder:latest
@@ -102,3 +103,7 @@ python benchmark.py
 - Discovered paths are saved to `all_links.txt`
 - Short filenames are saved to `all_filenames.txt`
 - Real-time console output shows progress and discoveries
+
+## Benchmarking Ollama LLM models
+
+I've compared the most popular local LLM models, you can find the [results here](https://github.com/Invicti-Security/brainstorm/blob/main/benchmark_report.md).
