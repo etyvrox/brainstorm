@@ -30,6 +30,14 @@ There are 2 tools:
 - Ollama (https://ollama.ai)
 - Required Python packages (see requirements.txt)
 
+## Local Ollama LLM 
+
+By default, the tool is using the model `qwen2.5-coder:latest`. This model needs to be downloaded first.
+
+```bash
+ollama pull qwen2.5-coder:latest
+```
+
 ## Installation
 
 ```bash
@@ -52,7 +60,7 @@ pip install -r requirements.txt
 # Basic fuzzing with default settings
 python fuzzer.py "ffuf -w ./fuzz.txt -u http://example.com/FUZZ"
 
-# Short filename fuzzing
+# Short filename fuzzing (specify the 8.3 filename as the last parameter)
 python fuzzer_shortname.py "ffuf -w ./fuzz.txt -u http://example.com/FUZZ" "BENCHM~1.PY"
 ```
 
