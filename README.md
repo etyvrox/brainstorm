@@ -2,6 +2,9 @@
 
 A smarter web fuzzing tool that combines local LLM models (via Ollama) and [ffuf](https://github.com/ffuf/ffuf) to optimize directory and file discovery.
 
+I wrote a blog post about the ideas behind this tool: 
+[Brainstorm tool release: Optimizing web fuzzing with local LLMs](https://www.invicti.com/blog/security-labs/brainstorm-tool-release-optimizing-web-fuzzing-with-local-llms/)
+
 ## Short Description
 
 Combines traditional web fuzzing techniques with AI-powered path generation to discover hidden endpoints, files, and directories in web applications.
