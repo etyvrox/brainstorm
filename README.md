@@ -81,7 +81,7 @@ python fuzzer_shortname.py "ffuf -w ./fuzz.txt -u http://example.com/FUZZ" "BENC
 ```
 --debug             Enable debug mode
 --cycles N          Number of fuzzing cycles to run (default: 50)
---model NAME        Ollama model to use (default: qwen2.5:latest)
+--model NAME        Ollama model to use (default: qwen2.5-coder:latest)
 --status-codes LIST Comma-separated list of status codes to consider successful
 ```
 
