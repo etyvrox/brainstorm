@@ -10,6 +10,7 @@ import random
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 from colorama import init, Fore, Style
+from ..custom_tool_handler import CustomToolHandler
 
 # Initialize colorama
 init()
@@ -152,6 +153,7 @@ def display_results(tested_links, new_discovered_links):
         print(f"\n{Fore.YELLOW}No new links were discovered{Style.RESET_ALL}")
 
 def main():
+    custom_tool = CustomToolHandler()
     logger.info("Starting fuzzer application")
     
     # Set up argument parser
@@ -222,7 +224,7 @@ def main():
                 logger.debug("\nSending prompt to Ollama:")
                 logger.debug(current_prompt)
                 
-            response = call_ollama(current_prompt, model=args.model)
+            response = custom_tool.deepseek_parse_output(output="", custom_prompt=current_prompt)
             
             if args.debug:
                 logger.debug("\nOllama response:")
