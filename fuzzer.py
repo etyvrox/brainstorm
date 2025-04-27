@@ -64,27 +64,6 @@ def format_headers(headers):
         formatted.append(f"{key}: {value}")
     return "\n".join(formatted)
 
-def call_ollama(prompt, model="qwen2.5-coder:latest"):
-    """Call the local Ollama API"""
-    try:
-        logger.info(f"Calling Ollama API with model {model}")
-        response = requests.post('http://localhost:11434/api/generate', 
-                                json={
-                                    "model": model,
-                                    "prompt": prompt,
-                                    "stream": False
-                                })
-        response.raise_for_status()
-        result = response.json()['response']
-        logger.info("Successfully received response from Ollama API")
-        return result
-    except requests.RequestException as e:
-        logger.error(f"Network error calling Ollama API: {e}")
-        return ""
-    except Exception as e:
-        logger.error(f"Unexpected error calling Ollama API: {e}", exc_info=True)
-        return ""
-
 def extract_new_links(response):
     """Extract links from between <new_files_dirs> tags"""
     pattern = r'<new_files_dirs>(.*?)</new_files_dirs>'
